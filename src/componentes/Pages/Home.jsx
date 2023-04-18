@@ -20,6 +20,12 @@ function Home() {
 
   return (
     <div className='container-fluid'>
+
+
+
+
+
+
       <div className="arrow-return container sm">
         <img src={IdupplaNaranja} className="img-fluid  img-user-img" alt="perfil" />
       </div>
@@ -29,25 +35,22 @@ function Home() {
 
 
         <div className='div-home-btn'>
-        <div className='centrado title-home'>
+          <div className='centrado title-home'>
 
-          <h3 className='text-btn-home'>Bienvenido a duppla</h3>
+            <h3 className='text-btn-home'><b>Bienvenido a duppla</b></h3>
 
-        </div>
+          </div>
 
           <div className="d-flex justify-content-center align-items-center container-sm ">
             <div>
               <Link to='/Inicio'>
-                <button type="button" className="btn btn-home btn-outline-primary text-btn-home " >CANCELAR</button>
+                <button type="button" className="btn btn-home  btn-outline-primary " ><p className='text-btn-home'><b>Apartamentos</b></p></button>
               </Link>
             </div><br />
             <div className="">
-              <button type="button" className="btn  btn-home  btn-outline-primary text-btn-home "  >ACEPTAR</button>
+              <button type="button" className="btn  btn-home  btn-outline-primary "  ><b>Portafolio</b></button>
             </div>
-
-
           </div>
-
         </div>
 
 
@@ -63,7 +66,7 @@ function Home() {
             <div className="col-8 ">
               <div className="card-body"><br />
                 { /* <h5 className="text-white text.amp "> {data.nombre}</h5>
-                                <p className=" text-white ">{data.email}</p>*/}
+                  <p className=" text-white ">{data.email}</p>*/}
               </div>
             </div>
           </div>

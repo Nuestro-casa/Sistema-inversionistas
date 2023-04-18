@@ -6,7 +6,7 @@ import {
 
 } from 'react-router-dom';
 
-import Home from './componentes/pages/Home.jsx'
+import Home from './componentes/Pages/Home.jsx'
 import Login from './componentes/Pages/Login.jsx'
 import SingIn from './componentes/Pages/SingIn.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,7 +26,7 @@ function App() {
       return <div>cargando...</div>;
     }
     if (!authenticated) {
-      return <Navigate to="/singin" />;
+      return <Navigate to="/login" />;
     }
     return children;
   }
@@ -34,7 +34,7 @@ function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path='/' element={<SingIn />} ></Route>
+        <Route path='/' element={<Login />} ></Route>
         <Route path='/singin' element={<SingIn />} ></Route>
         <Route path='/login' element={<Login />} ></Route>
        

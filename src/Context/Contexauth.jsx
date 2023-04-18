@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
             setToken({ token: tokenUser });
             navigate('/inicio')
         } else {
-            navigate('/singin')
+            navigate('/login')
         }     
     };
 
@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }) => {
         //console.log('logout');
         localStorage.removeItem('token');
         setToken(null);
-        navigate('/singin');
+        navigate('/login');
     };
 
     return (
