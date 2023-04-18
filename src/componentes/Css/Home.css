@@ -1,0 +1,79 @@
+code {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* variables de colores duppla*/
+:root {
+    --color-primario-btn: #6C9FFF;
+    --color-fondo: #FFFFFF;
+    --color-naranja-duppla: #FF864B;
+    --color-verde-duppla: #C5F5CA;
+    --color-cimiento-duppla: #0A3323;
+    --color-sombra-duppla: #EEEFF3;
+    --color-fondo-gris: #F9F9F9;
+}
+
+.img-home-inver {
+    width: 1450px;
+    height: 700px;
+    background-image: url(../../img/bghomec.jpg);
+    background-size: 1450px 700px;
+    background-repeat: no-repeat;
+    background-color: rgb(214, 136, 34);
+
+}
+
+.img-user-img {
+    width: 120px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+
+}
+
+.div-home-btn {
+
+    width: 800px;
+    height: 212px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 325px;
+    margin-bottom: 200px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 1;
+
+}
+
+.text-btn-home {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0A3323;
+}
+
+.title-home {
+    margin-top: 40px;
+    z-index: 2;
+}
+
+.btn-home {
+    display: flex;
+
+    align-items: center;
+    padding: 16px 48px;
+    gap: 4px;
+
+
+    width: 263px;
+    height: 36px;
+    margin-left: 38px;
+    margin-right: 38px;
+    margin-top: 40px;
+
+    background: #6C9FFF;
+    border-radius: 20px;
+    z-index: 2;
+    border-color: #0A3323;
+}
