@@ -8,7 +8,7 @@ import { Image } from 'react-bootstrap';
 import Idashboard from '../../img/Idashboard.svg';
 import Icustomer from '../../img/Iclientes.svg';
 import Iinmuebles from '../../img/Iinmuebles.svg';
-import { CustomerScript } from '../Scripts/CustomerScript';
+
 
 
 
