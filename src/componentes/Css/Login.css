@@ -13,22 +13,14 @@ code {
     --color-fondo-gris: #F9F9F9;
 }
 
-.prueba-container {
-
-   
-    display: flex;
-    
+.prueba-container {   
+    display: flex;    
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 1400px;
     height: 600px;
-
-
 }
-
-
-
 
 .column-login{
     display: flex;
@@ -37,12 +29,8 @@ code {
     margin-top: 20px;
     margin-right: 50px;
     margin-left: 50px;
-    
-   
-   
 
 }
-
 
 .form-register {
     display: flex;
@@ -54,7 +42,6 @@ code {
 .input-register {
     width: 352px;
     height: 52px;
-
 
 }
 
@@ -71,4 +58,12 @@ code {
 
     background: #FFFFFF;
     border: 2px solid #CBCBCB;
+}
+
+.img-logotipo {
+    
+    width: 160px;
+    height: auto;
+    margin-top: 60px;
+    margin-left: 20px;
 }

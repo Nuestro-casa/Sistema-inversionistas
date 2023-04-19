@@ -8,11 +8,10 @@ import { Image } from 'react-bootstrap';
 import Idashboard from '../../img/Idashboard.svg';
 import Icustomer from '../../img/Iclientes.svg';
 import Iinmuebles from '../../img/Iinmuebles.svg';
-import { CustomerScript } from '../Scripts/CustomerScript';
 
 
+const Property = () => {
 
-function Home() {
 
   // trae la función  salida, que se declaro en el contexto para implementar aquí
 
@@ -25,8 +24,6 @@ function Home() {
 
   return (
     <div className='home-inver'>
-
-
       <div className="d-grid">
         <div className="row align-items-center">
           <div className="col-3   ">
@@ -126,11 +123,29 @@ function Home() {
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
     </div>
+
+
+
+
+
+
+
 
 
 
   )
 }
 
-export default Home
+export default Property

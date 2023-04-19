@@ -19,7 +19,7 @@ code {
     align-items: center;
 
     width: 1200px;
-    height: 8 00px;
+    height: 800px;
 }
 
 .centrado {
@@ -29,11 +29,7 @@ code {
 
 }
 
-.img-logotipo {
 
-    width: 320px;
-    height: auto;
-}
 
 .text-white {
     color: var(--color-fondo);

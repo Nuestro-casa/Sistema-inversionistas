@@ -8,7 +8,9 @@ import {
 
 import Home from './componentes/Pages/Home.jsx'
 import Login from './componentes/Pages/Login.jsx'
-import SingIn from './componentes/Pages/SingIn.jsx'
+
+import Customer from './componentes/Pages/Customer.jsx';
+import Property from './componentes/Pages/Property.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthProvider } from './Context/Contexauth.jsx';
 import { AuthContext } from './Context/Contexauth.jsx';
@@ -35,10 +37,12 @@ function App() {
     <AuthProvider>
       <Routes>
         <Route path='/' element={<Login />} ></Route>
-        <Route path='/singin' element={<SingIn />} ></Route>
+       
         <Route path='/login' element={<Login />} ></Route>
        
         <Route exact path='/inicio' element={<Private><Home/></Private>} ></Route>
+        <Route exact path='/cliente' element={<Private><Customer/></Private>} ></Route>
+        <Route exact path='/inmueble' element={<Private><Property/></Private>} ></Route>
 
       </Routes>
     </AuthProvider>

@@ -8,12 +8,9 @@ import { Image } from 'react-bootstrap';
 import Idashboard from '../../img/Idashboard.svg';
 import Icustomer from '../../img/Iclientes.svg';
 import Iinmuebles from '../../img/Iinmuebles.svg';
-import { CustomerScript } from '../Scripts/CustomerScript';
 
 
-
-function Home() {
-
+const Customer = () => {
   // trae la función  salida, que se declaro en el contexto para implementar aquí
 
   const { logout } = useContext(AuthContext);
@@ -23,9 +20,9 @@ function Home() {
 
 
 
+
   return (
     <div className='home-inver'>
-
 
       <div className="d-grid">
         <div className="row align-items-center">
@@ -114,23 +111,22 @@ function Home() {
           </div>
           {/*Inicio segunda columna */}
           <div className="col-9">
-            {/*Embed tableau
+            {/*Embed tableau*/}
             <div className=" boards">
               <tableau-viz id='tableau-viz'
                 src='https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/customer_profile/Customerprofile'
                 width="1250" height="720" hide-tabs toolbar="bottom">
               </tableau-viz>
-            </div>*/}
+            </div>
 
 
           </div>
         </div>
       </div>
+
+
     </div>
-
-
-
   )
 }
 
-export default Home
+export default Customer
