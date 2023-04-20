@@ -113,6 +113,11 @@ const Property = () => {
           <div className="col-9">
             {/*Embed tableau*/}
             <div className=" boards">
+              <tableau-viz id='tableau-viz' src= 'https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/assets_profile/Assetsprofile' 
+              width='1250' height='730' hide-tabs toolbar='bottom' >
+                
+              </tableau-viz>
+              <br/>
               <tableau-viz id='tableau-viz' src='https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/portfolio_v1/Property'
                 width='1200' height='723' toolbar='bottom' >
               </tableau-viz>
