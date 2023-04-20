@@ -113,17 +113,25 @@ const Customer = () => {
           <div className="col-9">
             {/*Embed tableau*/}
             <div className=" boards">
-              <tableau-viz id='tableau-viz'
-                src='https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/customer_profile/Customerprofile'
-                width="1250" height="720" hide-tabs toolbar="bottom">
+              <script
+                type="module"
+                src="https://prod-useast-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+              ></script>
+              <tableau-viz
+                id="tableau-viz"
+                src="https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/customer_profile/Customerprofile"
+                width="1250"
+                height="720"
+                hide-tabs
+                toolbar="bottom"
+              ></tableau-viz>
+              <br />
+              <br />
+              <tableau-viz id='tableau-viz' src='https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/portfolio_v1/Buyer'
+                width='1200 ' height='723' toolbar='bottom' >
+
               </tableau-viz>
 
-              <br/>
-              <br/>
-              <tableau-viz id='tableau-viz' src='https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/portfolio_v1/Buyer'
-              width='1200 'height='723' toolbar= 'bottom' >
-                
-              </tableau-viz>
 
             </div>
 
