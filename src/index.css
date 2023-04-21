@@ -108,7 +108,7 @@ button:focus-visible {
     gap: 8px;
     width: 320px;
     height: 58px;
-    left: 24px;
+    margin-left: 8px;
     margin-top: 30px;
     margin-bottom: 5px;
     background: linear-gradient(0deg, #81A1F8, #81A1F8), #81A1F8;

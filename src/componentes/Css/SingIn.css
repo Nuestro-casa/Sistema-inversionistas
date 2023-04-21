@@ -29,11 +29,16 @@ code {
 
 }
 
+.title-register{
+    margin-left: 20px;
+}
 
 
 .text-white {
     color: var(--color-fondo);
 }
+
+
 
 .btn-prueba {
     display: flex;
@@ -55,7 +60,7 @@ code {
 }
 
 .btn-mover {
-    margin-left: 8px;
+    margin-left: 15px;
 }
 
 .text-center {

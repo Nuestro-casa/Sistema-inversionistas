@@ -96,10 +96,13 @@ function Home() {
                       </li>
                     </ul>
                     <hr />
-                    <li className="">
+                    <br/>
+                    <br/>
+                    <li className="move-btn-siderbar">
                       {/*componente calendario*/}
                       <div className="centrado" id="btnIniciarSesion">
-                        <button type="button" id="" onClick={handleLogout} className="btn btn-prueba" width="400px" height="46px" >
+                        <button type="button" id="" onClick={handleLogout} className="btn btn-prueba"  >
+                        
                           <p className='text-blue'> Cerrar sesión</p>
                         </button>
 

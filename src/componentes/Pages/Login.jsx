@@ -38,7 +38,7 @@ function Login() {
             const options = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: '{"email":"test@inv.com","password":"1234"}'
+                body: '{"email":"'+datos.email+'","password":"'+datos.password+'"}'
             };
 
             fetch('https://sistema-duppla-backend.herokuapp.com/inv/login', options).then(response => response.json())
@@ -64,15 +64,15 @@ function Login() {
     return (
         <div className=" prueba-container ">
             <div className="d-grid centrado">
-                <div className="container-Login">
+                <div className="container-login">
                     {/*división de columnas */}
                     <div class="row align-items-center">
                         <div class="col-6   ">
-                            <div className=" column-login   centrado">
+                            <div className=" column-login-one   centrado">
                                 <div className=" ">
                                     <div className="centrado">
                                         <Image src={Iduppla}
-                                            className=" img-logotipo justify-content-center"
+                                            className=" img-logotipo-login justify-content-center"
                                             alt="Simbolo duppla" />
                                     </div><br />
                                     <br />
