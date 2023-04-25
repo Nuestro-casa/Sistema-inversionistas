@@ -70,10 +70,11 @@ code {
 
 .img-logotipo {
     
-    width: 160px;
-    height: auto;
-    margin-top: 60px;
-    margin-left: 20px;
+    width: 128px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 24px;
+    margin-bottom: 10px;
 }
 
 .column-login {

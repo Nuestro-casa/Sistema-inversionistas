@@ -66,8 +66,8 @@ function Login() {
             <div className="d-grid centrado">
                 <div className="container-login">
                     {/*división de columnas */}
-                    <div class="row align-items-center">
-                        <div class="col-6   ">
+                    <div className="row align-items-center">
+                        <div className="col-6   ">
                             <div className=" column-login-one   centrado">
                                 <div className=" ">
                                     <div className="centrado">
@@ -80,7 +80,7 @@ function Login() {
                             </div>
                         </div>
                         {/*Segunda colunma */}
-                        <div class="col-6  ">
+                        <div className="col-6  ">
                             <div className="column-login ">
                                 <div className="form-register  centrado container-sm">
                                     <form onSubmit={handleSubmit} >

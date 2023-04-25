@@ -14,6 +14,7 @@ import Property from './componentes/Pages/Property.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthProvider } from './Context/Contexauth.jsx';
 import { AuthContext } from './Context/Contexauth.jsx';
+import {  HelmetProvider} from 'react-helmet-async'
 
 
 
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <AuthProvider>
+      <HelmetProvider>
       <Routes>
         <Route path='/' element={<Login />} ></Route>
        
@@ -45,6 +47,7 @@ function App() {
         <Route exact path='/inmueble' element={<Private><Property/></Private>} ></Route>
 
       </Routes>
+      </HelmetProvider>
     </AuthProvider>
   )
 }
