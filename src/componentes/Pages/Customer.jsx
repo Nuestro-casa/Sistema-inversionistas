@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import '../Css/Home.css'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/Contexauth';
@@ -19,14 +19,24 @@ const Customer = () => {
     logout();
   };
 
+  //Función para el embed Buyer
+  useEffect(() => {
+    var divElement = document.getElementById('viz1682537459047');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '1200px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '710px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; }
+    else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '1200px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '710px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; }
+    else { vizElement.style.width = '100%'; vizElement.style.minHeight = '1450px'; vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px'; }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  }, []);
+
 
 
 
   return (
     <div className='home-inver'>
-
-
-<nav class="navbar  navbar-expand-lg nav-size  fixed-top">
+      {/*Barra de navegación*/}
+      <nav class="navbar  navbar-expand-lg nav-size  fixed-top">
         <div class="container-fluid">
           <Image src={IdupplaNaranja} className=" img-logotipo navbar-brand " alt="Simbolo duppla" />
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -84,19 +94,14 @@ const Customer = () => {
                     </Link>
                   </div>
                 </li>
-
                 <li className="nav-item">
-
                   <div className=" container-sm ">
-                   
-                      <div className="card-docs-m   ">
-                        <div class="card-body-docs col-2 " onClick={handleLogout}  >
-                          <img src={Ilogout} className="" alt="" width="22px" height="22px" />
-                        </div>
-                        <br />
-
+                    <div className="card-docs-m   ">
+                      <div class="card-body-docs col-2 " onClick={handleLogout}  >
+                        <img src={Ilogout} className="" alt="" width="22px" height="22px" />
                       </div>
-                   
+                      <br />
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -108,16 +113,9 @@ const Customer = () => {
       <br />
 
 
-
-
-
-
-
-
-
-      {/*Inicio segunda columna */}
+      {/*Sección del embed */}
       <div className="">
-        {/*Embed tableau*/}
+        {/*Embed  1*/}
         <div className=" boards">
           <script
             type="module"
@@ -133,18 +131,32 @@ const Customer = () => {
           ></tableau-viz>
           <br />
           <br />
-          <tableau-viz id='tableau-viz' src='https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/portfolio_v1/Buyer'
-            width='1250 ' height='723' toolbar='bottom' >
+          {/*Embed buyer*/}
+          <div class='tableauPlaceholder' id='viz1682537459047' >
+            <noscript>
+              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;po&#47;portfolio_pub&#47;Buyer&#47;1_rss.png' style='border: none' /></a></noscript>
+            <object class='tableauViz'  >
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='portfolio_pub&#47;Buyer' />
+              <param name='tabs' value='yes' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;po&#47;portfolio_pub&#47;Buyer&#47;1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+              <param name='language' value='en-US' />
+            </object>
+          </div>
 
-          </tableau-viz>
 
 
         </div>
 
 
       </div>
-      <br/>
-    </div>
+      <br />
+    </div >
 
 
 
