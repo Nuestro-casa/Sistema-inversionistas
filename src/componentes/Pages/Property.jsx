@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import '../Css/Home.css'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/Contexauth';
@@ -116,7 +116,7 @@ const Property = () => {
       <br />
 
       {/*Inicio segunda columna */}
-      <div className="centrado">
+      <div>
         {/*Embed tableau*/}
         <div className=" boards">
           <div class='tableauPlaceholder' id='viz1682537459047' >
@@ -139,16 +139,6 @@ const Property = () => {
       </div>
       <br />
     </div>
-
-
-
-
-
-
-
-
-
-
 
 
   )
