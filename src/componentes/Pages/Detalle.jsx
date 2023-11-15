@@ -98,9 +98,9 @@ const Customer = () => {
 
 
       {/*Sección del embed */}
-      <div className="">
+      <div>
         {/*Embed  1*/}
-        <div className=" boards">
+        <div>
           {/*Embed buyer*/}
           <div class='tableauPlaceholder' id='viz1682537459047' >
             <noscript>
