@@ -117,20 +117,6 @@ const Customer = () => {
       <div className="">
         {/*Embed  1*/}
         <div className=" boards">
-          <script
-            type="module"
-            src="https://prod-useast-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
-          > </script>
-          <tableau-viz
-            id="tableau-viz"
-            src="https://prod-useast-a.online.tableau.com/t/nuestrocasa/views/customer_profile/Customerprofile"
-            width="1250"
-            height="720"
-            hide-tabs
-            toolbar="bottom"
-          ></tableau-viz>
-          <br />
-          <br />
           {/*Embed buyer*/}
           <div class='tableauPlaceholder' id='viz1682537459047' >
             <noscript>
