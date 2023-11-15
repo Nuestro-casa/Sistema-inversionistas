@@ -100,6 +100,9 @@ const Customer = () => {
       {/*Sección del embed */}
       <div>
         {/*Embed  1*/}
+        <br />
+        <br />
+        <br />
         <div>
           {/*Embed buyer*/}
           <div class='tableauPlaceholder' id='viz1682537459047' >
