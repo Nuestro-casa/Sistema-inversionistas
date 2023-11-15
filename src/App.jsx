@@ -9,12 +9,11 @@ import {
 import Home from './componentes/Pages/Home.jsx'
 import Login from './componentes/Pages/Login.jsx'
 
-import Customer from './componentes/Pages/Customer.jsx';
-import Property from './componentes/Pages/Property.jsx';
+import Detalle from './componentes/Pages/Detalle.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthProvider } from './Context/Contexauth.jsx';
 import { AuthContext } from './Context/Contexauth.jsx';
-import {  HelmetProvider} from 'react-helmet-async'
+import { HelmetProvider } from 'react-helmet-async'
 
 
 
@@ -37,16 +36,15 @@ function App() {
   return (
     <AuthProvider>
       <HelmetProvider>
-      <Routes>
-        <Route path='/' element={<Login />} ></Route>
-       
-        <Route path='/login' element={<Login />} ></Route>
-       
-        <Route exact path='/inicio' element={<Private><Home/></Private>} ></Route>
-        <Route exact path='/cliente' element={<Private><Customer/></Private>} ></Route>
-        <Route exact path='/inmueble' element={<Private><Property/></Private>} ></Route>
+        <Routes>
+          <Route path='/' element={<Login />} ></Route>
 
-      </Routes>
+          <Route path='/login' element={<Login />} ></Route>
+
+          <Route exact path='/inicio' element={<Private><Home /></Private>} ></Route>
+          <Route exact path='/detalle' element={<Private><Detalle /></Private>} ></Route>
+
+        </Routes>
       </HelmetProvider>
     </AuthProvider>
   )
