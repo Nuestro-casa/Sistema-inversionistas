@@ -7,7 +7,6 @@ import IdupplaNaranja from '../../img/Duppla_Logotipo_V2.png'
 import { Image } from 'react-bootstrap';
 import Idashboard from '../../img/Idashboard.svg';
 import Icustomer from '../../img/Iclientes.svg';
-import Iinmuebles from '../../img/Iinmuebles.svg';
 import Ilogout from '../../img/logout.svg';
 
 
@@ -65,35 +64,20 @@ const Customer = () => {
                 </li>
                 <li class="nav-item">
                   <div className=" container-sm ">
-                    <Link to='/cliente'>
+                    <Link to='/detalle'>
                       <div className="card-docs-m   ">
                         <div className="card-body-docs col-2">
                           <img src={Icustomer} className="" alt="" width="24px" height="24px" />
                         </div>
                         <br />
                         <div className="card-body col-10 text-space">
-                          <p className="card-text-docs text-nav">Cliente</p>
+                          <p className="card-text-docs text-nav">Detalle</p>
                         </div>
                       </div>
                     </Link>
                   </div>
                 </li>
-                <li class="nav-item ">
-                  <div className=" container-sm ">
-                    <Link to='/inmueble'>
-                      <div className="card-docs-m   ">
-                        <div class="card-body-docs col-2">
-                          <img src={Iinmuebles} className="" alt="" width="24px" height="24px" />
-                        </div>
-                        <br />
-                        <div className="card-body col-10 text-space">
-                          <p className="card-text-docs text-nav">Inmueble</p>
-                        </div>
 
-                      </div>
-                    </Link>
-                  </div>
-                </li>
                 <li className="nav-item">
                   <div className=" container-sm ">
                     <div className="card-docs-m   ">
