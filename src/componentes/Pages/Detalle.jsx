@@ -20,15 +20,40 @@ const Customer = () => {
 
   //Función para el embed Buyer
   useEffect(() => {
-    var divElement = document.getElementById('viz1700094002296');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '1200px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '710px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; }
-    else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '1200px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '710px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; }
-    else { vizElement.style.minWidth = '1200px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '710px'; vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px'; }
+    const adjustVizSize = () => {
+      var divElement = document.getElementById('viz1700094002296');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+
+      if (divElement.offsetWidth > 800 || divElement.offsetWidth > 500) {
+        vizElement.style.minWidth = '1200px';
+        vizElement.style.maxWidth = '100%';
+        vizElement.style.minHeight = '710px';
+        vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+      } else {
+        vizElement.style.minWidth = '1200px';
+        vizElement.style.maxWidth = '100%';
+        vizElement.style.minHeight = '710px';
+        vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px';
+      }
+    };
+
+    adjustVizSize(); // Initial adjustment
+
+    // Attach event listener for window resize
+    window.addEventListener('resize', adjustVizSize);
+
+    // Load the Tableau script
     var scriptElement = document.createElement('script');
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  }, []);
+    document.body.appendChild(scriptElement);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', adjustVizSize);
+      document.body.removeChild(scriptElement); // Remove the appended script
+    };
+
+  }, []);  // Empty dependency array to run the effect only once
 
 
 
