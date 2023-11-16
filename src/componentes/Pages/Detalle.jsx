@@ -131,13 +131,13 @@ const Customer = () => {
         <br />
         <div>
           {/*Embed buyer*/}
-          <div class='tableauPlaceholder' id='viz1700094002296' style='position: relative'>
+          <div class='tableauPlaceholder' id='viz1700094002296'>
             <noscript>
               <a href='#'>
                 <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;po&#47;portfolio_pub&#47;Selection&#47;1_rss.png' style='border: none' />
               </a>
             </noscript>
-            <object class='tableauViz' style='display:none;'>
+            <object class='tableauViz'  >
               <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
               <param name='embed_code_version' value='3' />
               <param name='site_root' value='' />
@@ -168,7 +168,6 @@ const Customer = () => {
 
   )
 }
-
 
 
 
