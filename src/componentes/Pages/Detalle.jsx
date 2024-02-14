@@ -61,19 +61,19 @@ const Customer = () => {
   return (
     <div className='home-inver'>
       {/*Barra de navegación*/}
-      <nav class="navbar  navbar-expand-lg nav-size  fixed-top">
-        <div class="container-fluid">
+      <nav className="navbar  navbar-expand-lg nav-size  fixed-top">
+        <div className="container-fluid">
           <Image src={IdupplaNaranja} className=" img-logotipo navbar-brand " alt="Simbolo duppla" />
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
+          <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div className="offcanvas-header">
 
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
+            <div className="offcanvas-body">
+              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li className="nav-item">
                   <div className="content-docs  container-sm ">
                     <Link to='/inicio'>
                       <div className="card-docs-m   ">
@@ -88,7 +88,7 @@ const Customer = () => {
                     </Link>
                   </div>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <div className=" container-sm ">
                     <Link to='/detalle'>
                       <div className="card-docs-m   ">
@@ -107,7 +107,7 @@ const Customer = () => {
                 <li className="nav-item">
                   <div className=" container-sm ">
                     <div className="card-docs-m   ">
-                      <div class="card-body-docs col-2 " onClick={handleLogout}  >
+                      <div className="card-body-docs col-2 " onClick={handleLogout}  >
                         <img src={Ilogout} className="" alt="" width="22px" height="22px" />
                       </div>
                       <br />

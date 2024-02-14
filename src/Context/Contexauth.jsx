@@ -18,23 +18,23 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const recovereToken = localStorage.getItem("token");       
-
+    
         if (recovereToken) {
-            setToken(JSON.parse(recovereToken));
+            try {
+                const parsedToken = JSON.parse(recovereToken);
+                if (parsedToken) {
+                    setToken(parsedToken);
+                } else {
+                    console.error("El token recuperado del almacenamiento local es undefined.");
+                }
+            } catch (error) {
+                console.error("Error al analizar el token:", error);
+            }
         }
         setLoanding(false);
-
     }, []);
+    
 
-
-    {/*useEffect(() => {
-        const recovereToken = localStorage.getItem("token");
-        if (recovereToken) {
-            setToken(JSON.parse(recovereToken));
-        }
-        setLoanding(false);
-
-    }, []);*/}
 
 
     //ejemplo de operador ternario condicion ? true : false

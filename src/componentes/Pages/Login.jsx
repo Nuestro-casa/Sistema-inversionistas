@@ -1,17 +1,21 @@
-import React, { useEffect, useContext, useState } from 'react'
-import '../Css/Login.css';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Context/Contexauth';
 import { useNavigate } from 'react-router-dom';
 import Iduppla from '../../img/Iduppla.png';
-import Image from 'react-bootstrap/Image'
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import { useTheme } from '@mui/material/styles';
 
 function Login() {
+   
+    const navigate = useNavigate();
+    const theme = useTheme();   
 
     const { login, authenticated } = useContext(AuthContext);
-
 
     /*Datos enviados a través del servicio*/
     const [datos, setDatos] = useState({
@@ -20,7 +24,6 @@ function Login() {
     });
 
     /*Función manejo de cambios en los inputs, maneja un evento e*/
-
     const handleInputChance = (e) => {
         setDatos({
             ...datos,
@@ -62,71 +65,88 @@ function Login() {
 
 
     return (
-        <div className=" prueba-container ">
-            <div className="d-grid centrado">
-                <div className="container-login">
-                    {/*división de columnas */}
-                    <div className="row align-items-center">
-                        <div className="col-6   ">
-                            <div className=" column-login-one   centrado">
-                                <div className=" ">
-                                    <div className="centrado">
-                                        <Image src={Iduppla}
-                                            className=" img-logotipo-login justify-content-center"
-                                            alt="Simbolo duppla" />
-                                    </div><br />
-                                    <br />
-                                </div>
-                            </div>
-                        </div>
-                        {/*Segunda colunma */}
-                        <div className="col-6  ">
-                            <div className="column-login ">
-                                <div className="form-register  centrado container-sm">
-                                    <form onSubmit={handleSubmit} >
-                                        <div className="title-register">
-                                            <h2> <b>Iniciar Sesión</b>
-                                            </h2>
-                                        </div>
-                                        <br />
-
-                                        <div className="mb-3">
-                                            <input type="email"
-                                                name='email'
-
-                                                onChange={handleInputChance}
-                                                value={datos.email}
-
-                                                className="form-control input-register-inver"
-                                                id="exampleInputEmail1"
-                                                placeholder="Correo electrónico"
-                                                aria-describedby="emailHelp"
-                                                required />
-
-                                        </div>
-                                        <div className="mb-3">
-
-                                            <input type="password"
-                                                name='password'
-                                                onChange={handleInputChance}
-                                                value={datos.password}
-                                                className="form-control input-register-inver"
-                                                placeholder="Contraseña"
-                                                id="exampleInputPassword1" />
-
-                                        </div>
-                                        <button type="submit"
-                                            className="btn btn-prueba-ingreso text-center links text-white btn-mover ">Siguiente</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+        <Container sx={{ overflowX: 'hidden' }}>
+            <Box
+                sx={{
+                    height: '100vh',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: '#ffffff',
+                    overflowX: 'hidden',
+                    overflowY: 'hidden'
+                }}
+            >
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={6} lg={6}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center'
+                            }}
+                        >
+                            <img
+                                src={Iduppla}
+                                alt="Simbolo duppla"
+                                style={{ width: '340px', height: '300px' }}
+                            />
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6} lg={6}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                textAlign: 'start'
+                               
+                            }}
+                        >
+                            <Typography variant="h5" sx={{ mt: 2, mb: 2, color: '#0A3323', textAlign: 'start' }}>
+                                Iniciar Sesión
+                            </Typography>
+                            <Box component="form" onSubmit={handleSubmit} sx={{ width: '80%' }}>
+                                <TextField
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    id="email"
+                                    label="Correo electrónico"
+                                    name="email"
+                                    value={datos.email}
+                                    onChange={handleInputChance}
+                                    variant="outlined"
+                                    sx={{ mb: 2 }}
+                                />
+                                <TextField
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    name="password"
+                                    label="Contraseña"
+                                    type="password"
+                                    id="password"
+                                    value={datos.password}
+                                    onChange={handleInputChance}
+                                    variant="outlined"
+                                    sx={{ mb: 2 }}
+                                />
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    sx={{ mb: 2, background: '#81A1F8', color: '#FFFFFF' }}
+                                >
+                                    Siguiente
+                                </Button>
+                            </Box>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Box>
+        </Container>
+    );
 }
-
 
 export default Login;
