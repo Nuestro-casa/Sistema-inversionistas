@@ -19,24 +19,16 @@ code {
     background-color: #F5F5F5;
 
 }
-
-
-
 .img-user-img {
     width: 120px;
     height: 100px;
     margin-top: 40px;
     margin-left: 30px;
     margin-bottom: 10px;
-
 }
-
-
-
 .text-btn-home {
     font-family: Arial, Helvetica, sans-serif;
     color: #0A3323;
-
 }
 
 .border-nav {
@@ -55,7 +47,13 @@ code {
     margin-top: 100px;
 
 }
-
+.tabla-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  }
+  
 .title-home {
     margin-top: 40px;
     z-index: 2;
@@ -102,21 +100,11 @@ code {
 
     top: 210px;
     bottom: 100px;
-
-
 }
-
-/*.card-docs-m:hover {
-
-    background-color: #F5F5F5;
-
-
-}*/
 
 .nav-size-img-duppla{
     width:10rem;
 }
-
 
 .card-text-docs {
     font-family: Arial, Helvetica, sans-serif;
@@ -163,29 +151,6 @@ code {
 }
 
 
-/*@media screen and (min-width: 990px) {
-
-   
-    .home-inver {
-        width: 1340px;
-        height: auto;
-        background-color: #F5F5F5;        
-    }
-    
-    .boards{
-        
-        justify-content: center;
-        align-items: center;
-        margin-left: 40px;
-        margin-right: 20px;
-        margin-top: 100px;
-    
-    }
-
-}
-
-;*/
-
 
 @media screen and (min-width: 1400px) {
 
@@ -193,7 +158,6 @@ code {
     .home-inver {
         width: 1910px;
         height: auto;
-
         background-color: #F5F5F5;
 
     }
