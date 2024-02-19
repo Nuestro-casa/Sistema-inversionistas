@@ -52,7 +52,7 @@ const Customer = () => {
         const windowHeight = window.innerHeight;
     
         // Define el tamaño máximo del ancho
-        const maxWidth = 1460; // Por ejemplo, establece un máximo de 1200px
+        const maxWidth = 1260; // Por ejemplo, establece un máximo de 1200px
     
         // Calcula el ancho y la altura según la relación de aspecto y el tamaño máximo
         const aspectRatio = 14 / 7; // Por ejemplo, 16:9
@@ -95,7 +95,7 @@ const Customer = () => {
 
   return (
 
-    <Box sx={{ flexGrow: 1,  backgroundColor: '#f5f5f5' }} >
+    <Box sx={{ flexGrow: 1,  }} >
       <Container maxWidth="xl" sx={{ mt: 2, mb: 4, p:2}}
         className=''>
 

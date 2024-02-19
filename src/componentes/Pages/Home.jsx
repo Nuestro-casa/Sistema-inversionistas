@@ -79,14 +79,11 @@ function Home() {
     return () => {
       window.removeEventListener("resize", adjustVizSize);
     };
-  }, []);
-  
-
-
+  }, []); 
 
   return (
-    <Box sx={{ flexGrow: 1,  backgroundColor: '#f5f5f5' }} >
-    <Container maxWidth="xl" sx={{ mt: 2, mb: 4, p:2}}
+    <Box sx={{ flexGrow: 1,  }} >
+    <Container maxWidth="xl" sx={{ mt: 2, p:2}}
       className=''>
 
       <Grid container sx={{
@@ -95,7 +92,7 @@ function Home() {
         justifyItems: 'center',
         width: '100%',
         height: '100hv',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#f5f5f5',
       }}>
         {/*Grafica principal-datos del inmueble  A2*/}
         <Grid className='' xs={12} sm={12} md={12} lg={12} sx={{

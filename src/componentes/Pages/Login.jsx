@@ -47,14 +47,12 @@ function Login() {
             fetch('https://sistema-duppla-backend.herokuapp.com/inv/login', options).then(response => response.json())
                 .then(function (response) {
                     //console.log(response.data);
-                    console.log('prueba', response.status);
+                  /*   console.log('prueba', response.status); */
                     if (!response.status === 200) {
                         console.log('error de login');
                     } else {
-                        login(response.token);
-                        console.log(response.token);
+                        login(response.token);                  
                         setDatos('');
-
                     }
 
                 }).catch(function (error) {

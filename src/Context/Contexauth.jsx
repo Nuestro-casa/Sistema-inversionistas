@@ -39,11 +39,8 @@ export const AuthProvider = ({ children }) => {
 
     //ejemplo de operador ternario condicion ? true : false
     const login = (tokenUser) => {
-
         localStorage.setItem('token', JSON.stringify(tokenUser));
-
-        if (tokenUser) {
-            console.log('ver si entra el', tokenUser);
+        if (tokenUser) {        
             setToken({ token: tokenUser });
             navigate('/inicio')
         } else {
@@ -51,10 +48,7 @@ export const AuthProvider = ({ children }) => {
         }     
     };
 
-
-
-    const logout = () => {
-        //console.log('logout');
+    const logout = () => {     
         localStorage.removeItem('token');
         setToken(null);
         navigate('/login');
